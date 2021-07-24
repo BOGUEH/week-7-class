@@ -1,15 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 
-export default function Product() {
-    const [count, setCount] = useState(1);
-    const handleClick = ()=>{
-        setCount(count *5)
+export default function Product(props) {
 
-    }
     return (
         <div>
-            <p>{count}</p>
-            <button onClick ={handleClick}>click</button>
+            <p>{props.count}</p>
+            <button onClick ={props.handleClick} >click</button>
         </div>
     );
 }

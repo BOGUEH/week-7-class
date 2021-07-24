@@ -6,16 +6,22 @@ import Card from "./components/card";
 import UserCard from "./UserCard.js";
 import  First from '../src/components/first.js'
 import  Product from '../src/components/Product.js'
+import {useState} from 'react';
 
 function App() {
 
+  const [count, setCount] = useState(0);
 
+  const handleClick = ()=>{
+      setCount(count +5);
+
+  };
  
 
   return (
     <div className="App">
 
-        <Product />
+        <Product count= {count}  handleClick= {handleClick} />
         {/* <First /> */}
 
     
